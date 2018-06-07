@@ -1,8 +1,16 @@
-<button type="button" id="add-photo-button"><i class="santa-face">
+<!--Addphoto modal containing:
+Add photo button and the following input id:
+  photo upload link:  id="item-url-input">
+  price:              id="price-input"
+  QTY:                id="qty-input"
+  Description:        id="item-description-input"
+-->
+
+<button type="button" id="add-item-button"><i class="fas fa-camera">
 </i></button>
 
 <div id="modal-backdrop" class="hidden"></div>
-<div id="add-photo-modal" class="hidden">
+<div id="add-item-modal" class="hidden">
 
   <div class="modal-dialog">
     <div class="modal-header">
@@ -12,18 +20,27 @@
 
     <div class="modal-body">
 
-*/CREATE ADD PHOTO INPUT SECTIONS :
-  photo upload link:
-  price:
-  QTY:
-  Description:
-  */
-
-
-    <div class="modal-footer">
-      <button type="button" class="modal-cancel-button">Cancel</button>
-      <button type="button" class="modal-accept-button">Create Twit</button>
-    </div>
-
+  <div class="item-input-element">
+    <label for="item-url-input">Photo URL</label>
+    <input type="text" id="item-url-input">
   </div>
+  <div class="price-input-element">
+    <label for="price-input">Price</label>
+    <input type="text" id="price-input">
+  </div>
+  <div class="qty-input-element">
+    <label for="qty-input">QTY</label>
+    <input type="text" id="qty-input">
+  </div>
+  <div class="item-input-element">
+    <label for="item-description-input">Description</label>
+    <input type="text" id="item-description-input"></input>
+  </div>
+
+<div class="modal-footer">
+  <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+  <button type="button" id="modal-accept" class="action-button">Add Item</button>
+</div>
+
+</div>
 </div>
