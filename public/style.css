@@ -1,0 +1,97 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+/* ---------SITE TITLE STUFF---------- */
+header {
+  background-color: #B3DAF1;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #03a9f4;
+}
+
+a:hover {
+  color: #0c719e;
+}
+
+.site-title {
+  font-family: cursive;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 200px;
+  margin: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 450px;
+
+}
+/* --------NAVIGATION BAR STUFF--------- */
+.navbar {
+  font-size: 19px;
+  background-color: #fff;
+  font-family: cursive;
+	font-style: normal;
+	font-weight: 80;
+}
+
+.navlist {
+  margin: 0 0 0 240px;
+  padding: 2px;
+}
+
+.navitem {
+  display: inline-block;
+  padding-left: 70px;
+}
+a {
+  color: #343434;
+}
+
+a:hover,
+a:focus {
+  color: #B3DAF1;
+}
+
+.navitem:hover {
+  font-color: #B3DAF1;
+}
+
+.navitem.right {
+  float: right;
+}
+/*-------------SEARCH BAR STUFF------------ */
+.navbar-search {
+  float: right;
+  margin-right: 0px;
+  padding: 0;
+  line-height: 38px;
+}
+
+#navbar-search-input {
+  padding: 4px;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+}
+
+#navbar-search-input:focus {
+  border: 2px solid #dadada;
+  background-color: #fff;
+}
+
+#navbar-search-button {
+  margin-left: 0px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: #343434;
+  cursor: pointer;
+}
+#navbar-search-button:hover {
+  color: #B3DAF1;
+}
