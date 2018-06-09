@@ -65,6 +65,37 @@ a:focus {
 .navitem.right {
   float: right;
 }
+.navbar-search {
+  float: right;
+  margin-right: 20px;
+  padding: 0;
+  line-height: 38px;
+}
+
+#navbar-search-input {
+  padding: 4px;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 2px;
+}
+
+#navbar-search-input:focus {
+  border: 2px solid #dadada;
+  background-color: #fff;
+}
+
+#navbar-search-button {
+  margin-left: 0px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: #343434;
+  cursor: pointer;
+}
+#navbar-search-button:hover {
+  color: #B3DAF1;
+}
 
 /*ADDED TO TEST ADD ITEM BUTTON AN MOD*/
 /CSS main container flex box and photo-box//
