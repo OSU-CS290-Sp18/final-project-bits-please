@@ -1,3 +1,6 @@
+
+/*ADD ITEM POPUP WINDOW JS*/
+//show add item modal
 function showAddItemModal() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
@@ -8,11 +11,7 @@ function showAddItemModal() {
   addItemModal.classList.remove('hidden');
 
 }
-
-var addItemButton = document.getElementById('add-item-button');
-if (addItemButton) {
-  addItemButton.addEventListener('click', showAddItemModal);
-}
+//hides add item modal
 function hideAddItemModal() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
@@ -22,37 +21,49 @@ function hideAddItemModal() {
   modalBackdrop.classList.add('hidden');
   addItemModal.classList.add('hidden');
 }
+
+/*  MORE INFO modal js */
+//shows info modal
+function moreInfoModal() {
+
+  var infoBackdrop = document.getElementById('modal-bdrop');
+  var infoModal = document.getElementById('item-modal');
+
+  // Show the modal and its backdrop.
+  infoBackdrop.classList.remove('info');
+  infoModal.classList.remove('info');
+
+}
+//hides info modal
+function hideInfoModal() {
+
+  var modalBdrop = document.getElementById('modal-bdrop');
+  var itemModal = document.getElementById('item-modal');
+
+
+  modalBdrop.classList.add('info');
+  itemModal.classList.add('info');
+}
+
+/*event listener*/
+/*add item button*/
+var addItemButton = document.getElementById('add-item-button');
+if (addItemButton) {
+  addItemButton.addEventListener('click', showAddItemModal);
+}
+/*close add item */
 var modalCloseButton = document.querySelector('#add-item-modal .modal-close-button');
 if (modalCloseButton) {
   modalCloseButton.addEventListener('click', hideAddItemModal);
 }
-/*-------------- JS FOR MORE INFO MODAL--------- */
-function moreInfoModal() {
 
-  var modalBackdrop = document.getElementById('modal-backdrop');
-  var infoModal = document.getElementById('more-info-modal');
-
-  // Show the modal and its backdrop.
-  modalBackdrop.classList.remove('hidden');
-  infoModal.classList.remove('hidden');
-
-}
-
+/*more info button*/
 var moreInfoButton = document.getElementById('more-info-button');
 if (moreInfoButton) {
   moreInfoButton.addEventListener('click', moreInfoModal);
 }
-
-function hideInfoModal() {
-
-  var modalBackdrop = document.getElementById('modal-backdrop');
-  var itemModal = document.getElementById('more-info-modal');
-
-
-  modalBackdrop.classList.add('hidden');
-  itemModal.classList.add('hidden');
-}
-var modalCloseButton = document.querySelector('#more-info-modal .modal-close-button');
-if (modalCloseButton) {
+/*close info button*/
+var closeinfoButton = document.querySelector('#more-info-modal .info-close-button');
+if (closeinfoButton) {
   modalCloseButton.addEventListener('click', hideInfoModal);
 }
