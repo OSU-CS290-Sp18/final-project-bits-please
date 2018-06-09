@@ -1,20 +1,21 @@
-<!DOCTYPE html>
 
+<!---MAIN PAGE LAYOUT--->
+<!DOCTYPE html>
 <html>
 <head>
 
   <meta charset="utf-8">
-  <title>Item</title>
+  <title>Almost Christmas</title>
 
   <!-- This is a stylesheet that includes the font: Roboto -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
 
-  <link rel="stylesheet" href="itempage.css" media="screen">
+  <link rel="stylesheet" href="style.css" media="screen">
 
   <!-- This script incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
   <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" defer></script>
 
-    <!--this script includes index.js-->
+  <!--this script includes index.js-->
   <script src="index.js" charset="utf-8" defer></script>
 </head>
 
@@ -81,18 +82,22 @@
 </header>
 
 <main class="content-container">
+  <li class="navitem navbar-search">
+    <input type="text" id="navbar-search-input" placeholder="Search...">
+    <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
+  </li>
 
     <section class="photo-box">
       <div class="img-container">
         <img class="item-photo-img" src="https://i.imgur.com/x4nOwL4.jpg" >
       </div>
-      <div class="item-name">
+      <div class="item-name"><b>Item: </b>
         santa
       </div>
-      <div class="item-price">
+      <div class="item-price"><b>Price: </b>
         $802
       </div>
-      <div class="item-Description">
+      <div class="item-Description"><b> Description: </b>
         there is no way you can own santa hahhahah
       </div>
       <div class = "more-info">
@@ -101,13 +106,136 @@
     </section>
 
 </main>
-<!--*********************ADD item BUTTON/module ****************-->
-  <button type="button" id="add-item-button"><i class="fas fa-camera">
-  </i></button>
 
+
+<!--*******************FOOTER*********************************-->
+<footer>
+<footer class="footer-sections">
+  <div class="footer-left">
+
+    <h3>Logo <span>Here</span></h3>
+  <p class="footer-company-name">Almost Christmas</p>
+    <p class="footer-links">
+      <a href="/">Home - </a></li>
+      <a href="/rentals">Rentals - </a></li>
+      <a href="/aboutus">About us - </a></li>
+      <a href="/contact">Contact Us - </a></li>
+      <a href="/cart">Cart </a></li>
+    </p>
+
+
+  </div>
+  <div class="footer-center">
+
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>5348 Vineland Ave, Bldg C</span> North Hollywood, CA</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>(818) 285-9627</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i><a href="mailto:Christmasprops@gmail.com">ChristmasProps@gmail.com</a>
+    </div>
+
+  </div>
+
+  <div class="footer-right">
+    <a href="https://www.days-until-christmas.co.uk" id="xcda3248" target="_blank">Days Until Christmas</a>
+    <script src="https://www.days-until-christmas.co.uk/webcounts/xcd3248.js"></script>
+    <div class="footer-icons">
+
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+
+      <button type="button" id="add-item-button"><i class="fas fa-camera">
+      </i></button>
+
+    </div>
+
+    <style>
+    /* ------LET IT SNOW!! ----- */
+    .snowflake {
+      color: #fff;
+      font-size: 1em;
+      font-family: Arial;
+      text-shadow: 0 0 1px #000;
+    }
+
+    @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+    </style>
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+      <div class="snowflake">
+      ❅
+      </div>
+      <div class="snowflake">
+      ❆
+      </div>
+      <div class="snowflake">
+      ❄
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!--MORE INFO BUTTON-->
+<div id="modal-bdrop" class="info"></div>
+<div id="item-modal" class="info">
+
+<div class="modal-box">
+  <div class="item-name">
+    <h3>Item:{{name}}</h3>
+    <button type="button" class="info-close-button">&times;</button>
+  </div>
+  <div class="item-body">
+
+  <div class="img-container">
+    <img class="item-photo-img" src="{{photoURL}}" />
+  </div>
+  <div class="item-price">
+    ${{price}}
+  </div>
+  <div class= "item-quantity">
+    ${{quantitiy}}
+  </div>
+  <div class="item-Description">
+    {{Description}}
+  </div>
+
+  <div class = "add-cart">
+  <button type="button" id="add-cart-button" class="action-button">Add To Cart</button>
+  </div>
+</div>
+</div>
+</div>
+
+<!--*********************ADD item BUTTON/module ****************-->
   <div id="modal-backdrop" class="hidden"></div>
   <div id="add-item-modal" class="hidden">
-
     <div class="modal-dialog">
       <div class="modal-header">
         <h3>Add a Photo</h3>
@@ -115,7 +243,6 @@
       </div>
 
       <div class="modal-body">
-
     <div class="item-input-element">
       <label for="item-url-input">Photo URL</label>
       <input type="text" id="item-url-input">
@@ -139,34 +266,7 @@
   </div>
 
   </div>
-  </div>
-/*  --------------------MORE INFO MODAL/ ITEM MODAL-------------*/
-<button type="button" id="more-info-button" class="action-button">More Info</button>
-<div id="modal-backdrop" class="hidden"></div>
-<div id = "more-info-modal" class = "hidden">
-
-  <div class = "info-header">
-
-    <h3>SANTA</h3>
-    <button type="button" class="modal-close-button">&times;</button>
-  </div>
-
-    <div class="info-body">
-
-    <div class="img-container">
-      <img class="item-photo-img" src="https://i.imgur.com/x4nOwL4.jpg" >
-    </div>
-    <div class="item-name">
-      santa
-      <button type="button" class="modal-close-button">&times;</button>
-    </div>
-    <div class="item-price">
-      $802
-    </div>
-    <div class="item-Description">
-      there is no way you can own santa hahhahah
-    </div>
 </div>
-</div>
+
  </body>
 </html>
