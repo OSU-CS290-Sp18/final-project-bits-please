@@ -1,33 +1,28 @@
 
 <!---MAIN PAGE LAYOUT--->
 <!DOCTYPE html>
-/*------NAVIGATION, FOOTER, HEADER, BODY----- */
 <html>
 <head>
 
   <meta charset="utf-8">
-  <title>Almost Christmas</title>
+  <title>Tweeter</title>
 
-  <!-- This is a stylesheet that includes Roboto -->
+  <!-- This is a stylesheet that includes the font you should use: Roboto -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
-<!--this gives access to the style.css file -->
+
   <link rel="stylesheet" href="style.css" media="screen">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
   <!-- This script incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
   <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" defer></script>
-  <!--this script includes handlebars runtime library-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.js" defer></script>
-  <!--NEED TO INCLUDE photoTEMPLATE.JS script>!-->
+   <script src="index.js" charset="utf-8" defer></script>
 
-  <!--this script includes index.js-->
-  <script src="/index.js" charset="utf-8" defer></script>
 </head>
 
 <body>
-<!--HEADER-->
+
 <header>
-  <h1 class="site-title">Almost Christmas</h1>
+ <h1 class="site-title">Almost Christmas</h1>
+
   <nav class="navbar">
     <ul class="navlist">
       <li class="navitem"><a href="/">Home</a></li>
@@ -38,13 +33,9 @@
       </li>
     </ul>
   </nav>
-</header>
-<!--*********ADDED MAIN AND PHOTOBOX HTML**********-->
-<main class="content-container">
-  <li class="navitem navbar-search">
-    <input type="text" id="navbar-search-input" placeholder="Search...">
-    <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
 
+
+<main class="content-container">
 
     <section class="photo-box">
       <div class="img-container">
@@ -59,67 +50,28 @@
       <div class="item-Description">
         there is no way you can own santa hahhahah
       </div>
+      <div class = "more-info">
+      <button type="button" id="more-info-button" class="action-button">More Info</button>
+    </div>
     </section>
 
-
 </main>
-<!--*********************ADD item BUTTON/module ****************-->
-  <button type="button" id="add-item-button"><i class="fas fa-camera">
-  </i></button>
-
-  <div id="modal-backdrop" class="hidden"></div>
-  <div id="add-item-modal" class="hidden">
-
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h3>Add a Photo</h3>
-        <button type="button" class="modal-close-button">&times;</button>
-      </div>
-
-      <div class="modal-body">
-
-    <div class="item-input-element">
-      <label for="item-url-input">Photo URL</label>
-      <input type="text" id="item-url-input">
-    </div>
-    <div class="item-input-element">
-      <label for="price-input">Price</label>
-      <input type="text" id="price-input">
-    </div>
-    <div class="item-input-element">
-      <label for="qty-input">QTY</label>
-      <input type="text" id="qty-input">
-    </div>
-    <div class="item-input-element">
-      <label for="item-description-input">Description</label>
-      <input type="text" id="item-description-input"></input>
-    </div>
-
-  <div class="modal-footer">
-    <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
-    <button type="button" id="modal-accept" class="action-button">Add Item</button>
-  </div>
-
-  </div>
-  </div>
-
-
-<!--*******************FOOTER*********************************-->
+  !--*******************FOOTER*********************************-->
 <footer>
 <footer class="footer-sections">
   <div class="footer-left">
 
     <h3>Logo <span>Here</span></h3>
-
+  <p class="footer-company-name">Almost Christmas</p>
     <p class="footer-links">
-      <a href="/">Home</a></li>
-      <a href="/rentals">Rentals</a></li>
-      <a href="/aboutus">About us</a></li>
-      <a href="/contact">Contact Us</a></li>
-      <a href="/cart">Cart</a></li>
+      <a href="/">Home - </a></li>
+      <a href="/rentals">Rentals - </a></li>
+      <a href="/aboutus">About us - </a></li>
+      <a href="/contact">Contact Us - </a></li>
+      <a href="/cart">Cart </a></li>
     </p>
 
-    <p class="footer-company-name">Almost Christmas Prop Shoppe</p>
+
   </div>
   <div class="footer-center">
 
@@ -134,22 +86,20 @@
     </div>
 
     <div>
-      <i class="fa fa-envelope"></i>
-      <p><a href="mailto:Christmasprops@gmail.com">ChristmasProps@gmail.com</a></p>
+      <i class="fa fa-envelope"></i><a href="mailto:Christmasprops@gmail.com">ChristmasProps@gmail.com</a>
     </div>
 
   </div>
 
   <div class="footer-right">
-
+    <a href="https://www.days-until-christmas.co.uk" id="xcda3248" target="_blank">Days Until Christmas</a>
+    <script src="https://www.days-until-christmas.co.uk/webcounts/xcd3248.js"></script>
     <div class="footer-icons">
 
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
 
     </div>
-
-    <style>
     /* ------LET IT SNOW!! ----- */
     .snowflake {
       color: #fff;
@@ -195,5 +145,46 @@
   </div>
 
 </footer>
+<!--*********************ADD item BUTTON/module ****************-->
+  <button type="button" id="add-item-button"><i class="fas fa-camera">
+  </i></button>
+
+  <div id="modal-backdrop" class="hidden"></div>
+  <div id="add-item-modal" class="hidden">
+
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Add a Photo</h3>
+        <button type="button" class="modal-close-button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+    <div class="item-input-element">
+      <label for="item-url-input">Photo URL</label>
+      <input type="text" id="item-url-input">
+    </div>
+    <div class="item-input-element">
+      <label for="price-input">Price</label>
+      <input type="text" id="price-input">
+    </div>
+    <div class="item-input-element">
+      <label for="qty-input">QTY</label>
+      <input type="text" id="qty-input">
+    </div>
+    <div class="item-input-element">
+      <label for="item-description-input">Description</label>
+      <input type="text" id="item-description-input"></input>
+    </div>
+
+  <div class="modal-footer">
+    <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+    <button type="button" id="modal-accept" class="action-button">Add Item</button>
+  </div>
+
+  </div>
+  </div>
  </body>
+  
 </html>
+
