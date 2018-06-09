@@ -225,3 +225,21 @@ a:focus {
   background-color: #eee;
 }
 /* --------------MORE INFO/PRODUCT MODULE---------- */
+
+
+#more-info-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+.info-header{
+  position: relative;
+  padding: 10px 20px;
+}
+.info-body{
+  padding: 20px;
+}
