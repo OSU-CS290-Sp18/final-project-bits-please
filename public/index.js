@@ -26,3 +26,33 @@ var modalCloseButton = document.querySelector('#add-item-modal .modal-close-butt
 if (modalCloseButton) {
   modalCloseButton.addEventListener('click', hideAddItemModal);
 }
+/* JS FOR MORE INFO MODAL */
+function moreInfoModal() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var infoModal = document.getElementById('more-info-modal');
+
+  // Show the modal and its backdrop.
+  modalBackdrop.classList.remove('hidden');
+  infoModal.classList.remove('hidden');
+
+}
+
+var moreInfoButton = document.getElementById('more-info-button');
+if (moreInfoButton) {
+  moreInfoButton.addEventListener('click', moreInfoModal);
+}
+
+function hideInfoModal() {
+
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var itemModal = document.getElementById('more-info-modal');
+
+
+  modalBackdrop.classList.add('hidden');
+  itemModal.classList.add('hidden');
+}
+var modalCloseButton = document.querySelector('#more-info-modal .modal-close-button');
+if (modalCloseButton) {
+  modalCloseButton.addEventListener('click', hideInfoModal);
+}
