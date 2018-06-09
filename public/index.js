@@ -26,7 +26,7 @@ var modalCloseButton = document.querySelector('#add-item-modal .modal-close-butt
 if (modalCloseButton) {
   modalCloseButton.addEventListener('click', hideAddItemModal);
 }
-/* JS FOR MORE INFO MODAL */
+/*-------------- JS FOR MORE INFO MODAL--------- */
 function moreInfoModal() {
 
   var modalBackdrop = document.getElementById('modal-backdrop');
