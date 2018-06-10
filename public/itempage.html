@@ -22,7 +22,7 @@
 <body>
 
 <header>
- <h1 class="site-title">Almost Christmas</h1>
+<h1 class="site-title"> <a href="https://imgur.com/oZVVaCh"><img src="https://i.imgur.com/oZVVaCh.png" title="source: imgur.com" /></a>Almost Christmas<a href="https://imgur.com/ROcSenx"><img src="https://i.imgur.com/ROcSenx.png" title="source: imgur.com" /></a></h1>
 
   <nav class="navbar">
     <ul class="navlist">
@@ -80,14 +80,17 @@
 </div>
 
 </header>
-
+<!--CONTENT CONTAINER-->
 <main class="content-container">
-  <li class="navitem navbar-search">
+
+  <div class="navitem navbar-search">
     <input type="text" id="navbar-search-input" placeholder="Search...">
     <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
-  </li>
-
+  </div>
+<!--Photo BOX-->
     <section class="photo-box">
+      <button type="button" class="photo-remove-button">&times;</button>
+    </div>
       <div class="img-container">
         <img class="item-photo-img" src="https://i.imgur.com/x4nOwL4.jpg" >
       </div>
@@ -104,6 +107,27 @@
       <button type="button" id="more-info-button" class="action-button">More Info</button>
     </div>
     </section>
+    <!--Photo BOX-->
+        <section class="photo-box">
+
+          <button type="button" class="photo-remove-button">&times;</button>
+          <div class="img-container">
+            <img class="item-photo-img" src="https://i.imgur.com/4vdyqWy.jpg" >
+          </div>
+          <div class="item-name"><b>Item: </b>
+            snowglobe
+          </div>
+          <div class="item-price"><b>Price: </b>
+            $15
+          </div>
+          <div class="item-Description"><b> Description: </b>
+            heres a ball with some water in it. cool
+          </div>
+          <div class = "more-info">
+          <button type="button" id="more-info-button" class="action-button">More Info</button>
+        </div>
+      </div>
+        </section>
 
 </main>
 
@@ -112,44 +136,53 @@
 <footer>
 <footer class="footer-sections">
   <div class="footer-left">
-
-    <h3>Logo <span>Here</span></h3>
-  <p class="footer-company-name">Almost Christmas</p>
-    <p class="footer-links">
-      <a href="/">Home - </a></li>
-      <a href="/rentals">Rentals - </a></li>
-      <a href="/aboutus">About us - </a></li>
-      <a href="/contact">Contact Us - </a></li>
-      <a href="/cart">Cart </a></li>
-    </p>
-
-
+    <div class="company-logo">
+<a href="https://imgur.com/b7AxpHU"><img src="https://i.imgur.com/b7AxpHU.png" title="source: imgur.com" /></a>
   </div>
+  <p class="footer-company-name">Almost Christmas</p>
+
+  <div class="footer-links">
+  <a href="/">Home - </a>
+  <a href="/rentals">Rentals - </a>
+  <a href="/aboutus">About us - </a>
+  <a href="/contact">Contact Us - </a>
+  <a href="/cart">Cart </a>
+  </div>
+</div>
   <div class="footer-center">
 
     <div>
-      <i class="fa fa-map-marker"></i>
-      <p><span>5348 Vineland Ave, Bldg C</span> North Hollywood, CA</p>
+      <i class="fa fa-map-marker"><a href="https://goo.gl/maps/YwLcQB6KdgA2"></i>
+      <p><span>5348 Vineland Ave, Bldg C</span> North Hollywood, CA</p></a>
     </div>
 
     <div>
-      <i class="fa fa-phone"></i>
-      <p>(818) 285-9627</p>
+      <i class="fa fa-phone"></i><a href= "tel:818-285-9627">
+      <p>(818) 285-9627</p></a>
     </div>
 
     <div>
-      <i class="fa fa-envelope"></i><a href="mailto:Christmasprops@gmail.com">ChristmasProps@gmail.com</a>
+      <i class="fa fa-envelope"></i><a href="mailto:Christmasprops@gmail.com"> ChristmasProps@gmail.com</a>
     </div>
+    <div class="footer-icons">
+
+      <a href="https://www.facebook.com/AlmostChristmasProps/"><i class="fab fa-facebook"></i></a>
+      <a href ="https://www.pinterest.com/christmasprops/"><i class="fab fa-pinterest-square"></i></a>
+      <a href ="https://www.instagram.com/christmasprops/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.yelp.com/biz/almost-christmas-prop-shoppe-north-hollywood-2"><i class="fab fa-yelp"></i></a>
+    </div>
+
 
   </div>
 
   <div class="footer-right">
-    <a href="https://www.days-until-christmas.co.uk" id="xcda3248" target="_blank">Days Until Christmas</a>
-    <script src="https://www.days-until-christmas.co.uk/webcounts/xcd3248.js"></script>
-    <div class="footer-icons">
+    <div class ="countdown-container">
+      <img src="https://i.imgur.com/vhmQD7U.png?1" title="countdown">
+      <div class="countdown-text">
+    Days Until Christmas
+    <script src="https://www.days-until-christmas.co.uk/webcounts/xcd3248.js"></script></div>
+  </div>
 
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
 
       <button type="button" id="add-item-button"><i class="fas fa-camera">
       </i></button>
@@ -202,7 +235,7 @@
   </div>
 
 </footer>
-<!--MORE INFO BUTTON-->
+<!--MORE INFO Modal-->
 <div id="modal-bdrop" class="info"></div>
 <div id="item-modal" class="info">
 
@@ -214,7 +247,7 @@
   <div class="item-body">
 
   <div class="img-container">
-    <img class="item-photo-img" src="{{photoURL}}" />
+    <img class="item-photo-img" src="https://i.imgur.com/x4nOwL4b.jpg" />
   </div>
   <div class="item-price">
     ${{price}}
@@ -227,7 +260,8 @@
   </div>
 
   <div class = "add-cart">
-  <button type="button" id="add-cart-button" class="action-button">Add To Cart</button>
+  <button type="button" id="add-to-cart"><i class="fas fa-cart-plus"></i>
+  </button>
   </div>
 </div>
 </div>
