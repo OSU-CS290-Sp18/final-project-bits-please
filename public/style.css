@@ -270,11 +270,11 @@ text-align:center;
   text-align: center;
   margin: 5px;
 }
-
+/*PHOTO X BUTTON ADD/HIDE based on page*/
 .photo-remove-button {
-  position: absolute;
-  right: 10px;
-  top: 5px;
+  position: relative;
+  left: 1px;
+  top: 1px;
   font-size: 24px;
   border: none;
   background: none;
@@ -515,4 +515,19 @@ text-align:center;
 
 #add-to-cart:focus {
   outline: none;
+}
+/********ABOUT US PAGE ************/
+.about-us {
+  padding-top: 10px;
+  padding-left: 250px;
+  padding-right: 250px;
+  width: 50%;
+  color: #146E10;
+
+}
+.about-header{
+  font-family: cursive;
+  color: #E00000;
+  size: 32px;
+  font-weight: bold;
 }
