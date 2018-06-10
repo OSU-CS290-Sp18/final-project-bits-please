@@ -18,6 +18,22 @@ main{
   display: flex;
   flex-wrap: wrap;
 }
+a:hover {
+  color: #0c719e;
+}
+
+.site-title {
+  font-family: cursive;
+	font-size: 72px;
+	font-style: normal;
+	font-weight: 200px;
+  margin: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 200px;
+  text-shadow: -1px 4px 2px rgba(28,110,164,0.73);
+
+}
 /********FOOTER CSS*******/
 footer {
     position: relative;
@@ -34,7 +50,7 @@ footer {
 	text-align: left;
 	font: bold 16px sans-serif;
 
-	padding: 20px 40px;
+	padding: 20px 30px;
 	margin-top: 30px;
 }
 
@@ -50,28 +66,34 @@ footer {
 .footer-left{
 	width: 40%;
 }
+.footer-left .company-logo{
+	max-height: 200px;
+}
+.company-logo{
+margin-left: 50px;
+}
+.footer-company-name{
+  font-family: cursive;
+	color:  #fff;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0;
 
-
+}
 /* Footer links */
 
 .footer-links{
 	color:  #ffffff;
 	margin: 20px 0 12px;
-	padding: 0;
+	padding: 5;
 }
 
 .footer-links a{
 	display:inline-block;
+  padding-top: 0px;
 	line-height: 1.8;
 	text-decoration: none;
-	color:  inherit;
-}
-
-.footer-company-name{
-	color:  #fff;
-	font-size: 20px;
-	font-weight: bold;
-	margin: 0;
+	color:  white;
 }
 
 /* Footer Center */
@@ -101,13 +123,14 @@ footer {
 	color: #ffffff;
 	vertical-align: middle;
 	margin:5px;
+  line-height: 3;
 }
 
 .footer-center p span{
 	display:block;
 	font-weight: normal;
 	font-size:14px;
-	line-height:2;
+	line-height:0;
 }
 
 .footer-center p a{
@@ -121,8 +144,25 @@ footer {
 .footer-right{
 	width: 20%;
 }
+/*snowglobe*/
+.countdown-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/*center text */
+.countdown-text{
+  color:white;
+  position: absolute;
+  top: 55%;
+  left: 45%;
+    transform: translate(-50%, -50%);
+}
+
 .footer-icons{
-	margin-top: 25px;
+	margin-top: 35px;
+  margin-left: 25px;
 }
 
 .footer-icons a{
@@ -144,21 +184,7 @@ footer {
 
 
 
-a:hover {
-  color: #0c719e;
-}
 
-.site-title {
-  font-family: cursive;
-	font-size: 48px;
-	font-style: normal;
-	font-weight: 200px;
-  margin: 0px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 450px;
-
-}
 /* --------NAVIGATION BAR STUFF--------- */
 .navbar {
   font-size: 19px;
@@ -195,11 +221,14 @@ a:focus {
 }
 /*-------------SEARCH BAR STUFF------------ */
 .navbar-search {
-  float: right;
-  margin-right: 500px;
-  padding: 0;
-  line-height: 38px;
+width:100%;
+height:auto;
+margin:0px;
+padding:0px;
+float:left;
+text-align:center;
 }
+
 
 #navbar-search-input {
   padding: 4px;
@@ -240,6 +269,17 @@ a:focus {
   padding: 10px;
   text-align: center;
   margin: 5px;
+}
+
+.photo-remove-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .item-photo-img{
@@ -294,9 +334,9 @@ a:focus {
 
 .action-button {
   font-size: 20px;
-  color: white;
+  color: black;
   padding: 10px;
-  background-color: #000;
+  background-color: #B3DAF1;
   border: 1px solid #ababab;
   border-radius: 5px;
   font-weight: lighter;
@@ -322,7 +362,7 @@ a:focus {
   font-size: 28px;
 }
 
-#modal-close {
+.modal-close-button {
   position: absolute;
   right: 10px;
   top: 5px;
@@ -419,7 +459,8 @@ a:focus {
   font-size: 28px;
 }
 
-#modal-close-button {
+
+.info-close-button {
   position: absolute;
   right: 10px;
   top: 5px;
