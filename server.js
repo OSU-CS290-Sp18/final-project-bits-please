@@ -16,7 +16,7 @@ var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
 
 var mongoHost = process.env.MONGO_HOST;
-var mongoPort= process.enc.MONGO_PORT || '27017';
+var mongoPort= process.env.MONGO_PORT || '27017';
 var mongoUsername = process.env.MONGO_USERNAME;
 var mongoPassword = process.env.MONGO_PASSWORD;
 var mongoDBName = process.env.MONGO_DB_NAME;
@@ -28,10 +28,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 
-var rawData = fs.readFileSync('./twitData.json');//fix
-var twitData = JSON.parse(rawData);//fix
 var port = process.env.PORT || 3000;
-
 
 
 app.use(express.static('public'));
