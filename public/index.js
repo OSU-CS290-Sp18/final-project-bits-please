@@ -22,7 +22,7 @@ function hideAddItemModal() {
   addItemModal.classList.add('hidden');
 }
 
-/*  MORE INFO modal js */
+/*  MORE INFO modal js*/
 //shows info modal
 function moreInfoModal() {
 
@@ -37,12 +37,12 @@ function moreInfoModal() {
 //hides info modal
 function hideInfoModal() {
 
-  var modalBdrop = document.getElementById('modal-bdrop');
-  var itemModal = document.getElementById('item-modal');
+  var infoBackdrop = document.getElementById('modal-bdrop');
+  var infoModal = document.getElementById('item-modal');
 
-
-  modalBdrop.classList.add('info');
-  itemModal.classList.add('info');
+  // Show the modal and its backdrop.
+  infoBackdrop.classList.add('info');
+  infoModal.classList.add('info');
 }
 
 /*event listener*/
@@ -63,7 +63,12 @@ if (moreInfoButton) {
   moreInfoButton.addEventListener('click', moreInfoModal);
 }
 /*close info button*/
-var closeinfoButton = document.querySelector('#more-info-modal .info-close-button');
-if (closeinfoButton) {
-  modalCloseButton.addEventListener('click', hideInfoModal);
+var closeInfoButton = document.querySelector('#item-modal .info-close-button');
+if (closeInfoButton) {
+  closeInfoButton.addEventListener('click', hideInfoModal);
+}
+/*add to cart*/
+var addToCart = document.querySelector('#item-modal .add-to-cart');
+if (addToCart) {
+  addToCart.addEventListener('click', hideInfoModal);
 }
