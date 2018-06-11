@@ -67,13 +67,54 @@ app.get('/twits/:num', function(req,res,next){
 	});
 	*/
 });//fix
+
+app.post('/items/addPhoto', function (req, res, next) {
+	var person = req.params.person.toLowerCase();
+	if (req.body && req.body.caption && req.body.photoURL) {
+		var photo = {
+			caption: req.body.caption,
+			photoURL: req.body.photoURL
+		};
+		/*
+		    var peopleCollection = mongoDB.collection('people');
+    peopleCollection.updateOne(
+      { personId: person },
+      { $push: { photos: photo } },
+      function (err, result) {
+        if (err) {
+          res.status(500).send("Error inserting photo into DB.")
+        } else {
+          console.log("== mongo insert result:", result);
+          if (result.matchedCount > 0) {
+            res.status(200).end();
+          } else {
+            next();
+          }
+        }
+      }
+    );
+		*/
+	}
+	else {
+		res.status(400).send("Request needs a JSON body with caption and photoURL.")
+	}
+});
 app.get('*', function (req, res) {
 res.render('404page');
 	//	res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 	//	res.status(404).render('404Page', {});
 });
 
-app.listen(port, function () {
+/*app.listen(port, function () {
 	console.log("== Server is listening on port", port);
 });
- 
+ */
+MongoClient.connect(mongoURL, function (err,client) {
+	if (err) {
+		throw err;
+	}
+	mongoDB = client.db(mongoDBName);
+	app.listen(port, function () {
+		console.log("== Server listening on port", port);
+	});
+})
