@@ -34,21 +34,17 @@ var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 app.use(bodyParser.json());//come back to
 
-app.get('/', function(req,res) {
-	res.status(200).render('twitPage', {twit: twitData, index: 1});//fix
-			//^^handlebars in views folder
-
-});
-
-app.get('/twits/:num', function(req,res,next){
-	var num = req.params.num;
-
-	if (twitData[num]) {
-		res.status(200).render('twitPage', {twit: [twitData[num]], noButton: true});
-	}//render handlebars in views folder^^
-	else {
-		next();
-	}
+/*This if else will get them the partial of a file that ends in "Page"
+So, if they enter url.com/item it will render itemPage.handlebars.
+If it does not exist, then it will catch the error and give them the 404
+This way, we can add as many pages as we wish in the future without changing server.js
+found this method at https://stackoverflow.com/questions/4482686/check-synchronously-if-file-directory-exists-in-node-js
+*/
+app.get('/:pageRequested', function(req,res,next){
+	var pageRequested = req.params.pageRequested;
+    res.status(200).render(pageRequested.toLowerCase() + "Page");
+   });
+} 
 	
 	/**************COME BACK TO
 	var photoCollection = mongoDB.collection('photos');
@@ -63,12 +59,6 @@ app.get('/twits/:num', function(req,res,next){
 	});
 	});
 	*/
-});//fix
-app.get('*', function (req, res) {
-res.render('404page');
-	//	res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
-	//	res.status(404).render('404Page', {});
-});
 
 app.listen(port, function () {
 	console.log("== Server is listening on port", port);
