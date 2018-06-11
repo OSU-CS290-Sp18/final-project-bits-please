@@ -41,10 +41,18 @@ This way, we can add as many pages as we wish in the future without changing ser
 found this method at https://stackoverflow.com/questions/4482686/check-synchronously-if-file-directory-exists-in-node-js
 */
 app.get('/:pageRequested', function(req,res,next){
-	var pageRequested = req.params.pageRequested;
-    res.status(200).render(pageRequested.toLowerCase() + "Page");
-   });
-} 
+	let pageRequested = req.params.pageRequested.toLowerCase() + "Page";
+    let fileCheck = pageRequested + ".handlebars";
+    
+    if(fs.existsSync("partials/" + fileCheck)){
+        res.status(200).render(pageRequested);
+    }
+    
+    else{
+        res.write("404 heh");
+        res.send();
+    }
+});
 	
 	/**************COME BACK TO
 	var photoCollection = mongoDB.collection('photos');
