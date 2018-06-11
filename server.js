@@ -43,7 +43,7 @@ found this method at https://stackoverflow.com/questions/4482686/check-synchrono
 app.get('/:pageRequested', function(req,res,next){
 	let pageRequested = req.params.pageRequested.toLowerCase() + "Page";
     let fileCheck = pageRequested + ".handlebars";
-    
+    console.log(pageRequested + " " + fileCheck)
     if(fs.existsSync("views/" + fileCheck)){
         res.status(200).render(pageRequested);
     }
