@@ -24,7 +24,7 @@ var mongoDBName = process.env.MONGO_DB_NAME;
 var mongoURL = "mongodb://" + mongoUsername + ":" + mongoPassword + "@"  + mongoHost + ":" + mongoPort + "/" + mongoDBName;
 
 var mongoDB = null;
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({defaultLayout: 'mainLayout'}));
 app.set('view engine', 'handlebars');
 
 
@@ -34,25 +34,30 @@ var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 app.use(bodyParser.json());//come back to
 
-/*This if else will get them the partial of a file that ends in "Page"
-So, if they enter url.com/item it will render itemPage.handlebars.
-If it does not exist, then it will catch the error and give them the 404
-This way, we can add as many pages as we wish in the future without changing server.js
-found this method at https://stackoverflow.com/questions/4482686/check-synchronously-if-file-directory-exists-in-node-js
-*/
-app.get('/:pageRequested', function(req,res,next){
-	let pageRequested = req.params.pageRequested.toLowerCase() + "Page";
-    let fileCheck = pageRequested + ".handlebars";
-    console.log(pageRequested + " " + fileCheck)
-    if(fs.existsSync("views/" + fileCheck)){
-        res.status(200).render(pageRequested);
-    }
-    
-    else{
-        res.write("404 heh");
-        res.send();
-    }
+
+/*Getting Different Pages*/
+app.get('/', function(req,res,next){
+    res.status(200).render('homePage');
 });
+
+app.get('/aboutus', function(req,res,next){
+    res.status(200).render('aboutPage');
+});
+
+app.get('/cart', function(req,res,next){
+    res.status(200).render('cartPage');
+});
+
+app.get('/contact', function(req,res,next){
+    res.status(200).render('contactPage');
+});
+
+
+app.get('/rentals', function(req,res,next){
+    res.status(200).render('rentalsPage');
+});
+
+/*404*/
 	
 	/**************COME BACK TO
 	var photoCollection = mongoDB.collection('photos');
