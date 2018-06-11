@@ -44,7 +44,7 @@ app.get('/:pageRequested', function(req,res,next){
 	let pageRequested = req.params.pageRequested.toLowerCase() + "Page";
     let fileCheck = pageRequested + ".handlebars";
     
-    if(fs.existsSync("partials/" + fileCheck)){
+    if(fs.existsSync("views/" + fileCheck)){
         res.status(200).render(pageRequested);
     }
     
