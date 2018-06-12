@@ -68,3 +68,26 @@ function clearCart()  {
   }
  
  }
+
+ function listCart() {
+    var copyCart = [];
+   for (var i in cart) {
+     var item = cart[i];
+     var itemCopy = {};
+     for (var j in item) {
+          itemCopy[j] = item[j];
+     }
+     copyCart.push(itemCopy);
+ }
+   return copyCart;
+ }
+
+function saveCart()  {
+ 
+  localStorage.setItem("shoppingCart", JSON.stringify(cart));
+  
+}
+
+function loadCart()  {
+  cart = JSON.parse(localStorage.getItem("shoppingCart"));
+}
