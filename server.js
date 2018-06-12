@@ -58,7 +58,10 @@ app.get('/rentals', function(req,res,next){
 });
 
 /*404*/
-	
+app.get('*', function(req,res,next){
+    res.status(404).render('404Page');
+});
+
 	/**************COME BACK TO
 	var photoCollection = mongoDB.collection('photos');
 	photoCollection.find().toArray(function (err, people) {
