@@ -55,6 +55,13 @@ body {
 color: red;	
 }
 
+.success {
+color: 	#ff9966;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	
+}
 fieldset {
 	border: medium none !important;
 	margin: 0 0 10px;
