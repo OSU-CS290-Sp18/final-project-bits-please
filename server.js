@@ -53,8 +53,18 @@ app.get('/contact', function(req,res,next){
 });
 
 
-app.get('/rentals/:searchTerms', function(req,res,next){
-    res.status(200).render('rentalsPage');
+app.get('/rentals', function(req,res,next){
+    var inventoryCollection = db.collection('inventory');
+    var inventory = inventoryCollection.find();
+    
+    inventory.toArray(function (err, items) {
+    if (err) {
+    res.status(500).send("Error fetching people from DB.");
+    } 
+    else {    
+    res.status(200).render('rentalsPage', {items});
+    }
+});
 });
 
 /*404*/
@@ -64,27 +74,21 @@ app.get('*', function(req,res,next){
 
 /*Uploading New Items*/
 app.post('/addItem', function(req,res){
-   console.log(req.body.picURL);   
-   console.log(req.body.price);  
-   console.log(req.body.qty);  
-   console.log(req.body.description);     
+   db.collection('inventory').insertOne({
+       photoURL: req.body.photoURL,   
+       price: req.body.price, 
+       qty: req.body.qty,  
+       description: req.body.description    
+   });
 });
 
-	/**************COME BACK TO
-	var photoCollection = mongoDB.collection('photos');
-	photoCollection.find().toArray(function (err, people) {
-	if (err) {
-	res.status(500).send("Error fetching photos from DB.");
-	} else {
-	res.status(200).render('photoPage', {
-	photos: photos
-	});
-	}
-	});
-	});
-	*/
-
-app.listen(port, function () {
-	console.log("== Server is listening on port", port);
+console.log(mongoURL);
+MongoClient.connect(mongoURL, function (err, client) {
+  if (err) {
+    throw err;
+  }
+  db = mongoDBDatabase = client.db(mongoDBName);
+  app.listen(3000, function () {
+    console.log("== Server listening on port 3000");
+  });
 });
- 

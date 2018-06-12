@@ -24,14 +24,14 @@ function hideAddItemModal() {
 
 
 /* Data Interaction and Server Work*/
-var picURL = document.getElementById("item-url-input");
+var photoURL = document.getElementById("item-url-input");
 var price = document.getElementById("price-input");
 var qty = document.getElementById("qty-input");
 var description = document.getElementById("item-description-input");
 var acceptBtn = document.getElementById("modal-accept");
 
 acceptBtn.addEventListener("click", function(){
-    if(!picURL.value || !price.value || !qty.value || !description.value){
+    if(!photoURL.value || !price.value || !qty.value || !description.value){
         alert("You must fill in all of the required fields!");
         return;
     }
@@ -41,7 +41,7 @@ acceptBtn.addEventListener("click", function(){
     upload.setRequestHeader('Content-Type', 'application/json');
     
     var newItem = {
-        picURL: picURL.value,
+        photoURL: photoURL.value,
         price: price.value,
         qty: qty.value,
         description: description.value
