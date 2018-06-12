@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = test_input($_POST["message"]);
   }
   
+
   if ($name_error == '' and $email_error == '' and $phone_error == '' and $url_error == '' ){
       $message_body = '';
       unset($_POST['submit']);
