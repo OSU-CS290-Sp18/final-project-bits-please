@@ -50,6 +50,11 @@ body {
 	font-size:13px;
 }
 
+.error {
+	
+color: red;	
+}
+
 fieldset {
 	border: medium none !important;
 	margin: 0 0 10px;
