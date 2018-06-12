@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $message_body .=  "$key: $value\n";
       }
       
-      $to = 'vladi@clevertechie.com';
+      $to = 'villaser@oregonstate.edu';
       $subject = 'Contact Form Submit';
       if (mail($to, $subject, $message)){
           $success = "Message sent, thank you for contacting us!";
