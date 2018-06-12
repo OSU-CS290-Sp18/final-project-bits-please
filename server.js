@@ -53,7 +53,7 @@ app.get('/contact', function(req,res,next){
 });
 
 
-app.get('/rentals', function(req,res,next){
+app.get('/rentals/:searchTerms', function(req,res,next){
     res.status(200).render('rentalsPage');
 });
 
