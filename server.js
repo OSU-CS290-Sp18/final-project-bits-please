@@ -62,6 +62,14 @@ app.get('*', function(req,res,next){
     res.status(404).render('404Page');
 });
 
+/*Uploading New Items*/
+app.post('/addItem', function(req,res){
+   console.log(req.body.picURL);   
+   console.log(req.body.price);  
+   console.log(req.body.qty);  
+   console.log(req.body.description);     
+});
+
 	/**************COME BACK TO
 	var photoCollection = mongoDB.collection('photos');
 	photoCollection.find().toArray(function (err, people) {

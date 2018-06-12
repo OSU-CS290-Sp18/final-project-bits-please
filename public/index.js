@@ -22,6 +22,36 @@ function hideAddItemModal() {
   addItemModal.classList.add('hidden');
 }
 
+
+/* Data Interaction and Server Work*/
+var picURL = document.getElementById("item-url-input");
+var price = document.getElementById("price-input");
+var qty = document.getElementById("qty-input");
+var description = document.getElementById("item-description-input");
+var acceptBtn = document.getElementById("modal-accept");
+
+acceptBtn.addEventListener("click", function(){
+    if(!picURL.value || !price.value || !qty.value || !description.value){
+        alert("You must fill in all of the required fields!");
+        return;
+    }
+    
+    var upload = new XMLHttpRequest();
+    upload.open('POST', "/addItem");
+    upload.setRequestHeader('Content-Type', 'application/json');
+    
+    var newItem = {
+        picURL: picURL.value,
+        price: price.value,
+        qty: qty.value,
+        description: description.value
+    };
+    
+    uploadBody = JSON.stringify(newItem);
+    upload.send(uploadBody);
+    
+});
+
 /*  MORE INFO modal js*/
 //shows info modal
 function moreInfoModal() {
