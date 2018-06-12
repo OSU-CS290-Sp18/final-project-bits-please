@@ -72,3 +72,36 @@ var addToCart = document.querySelector('#item-modal .add-to-cart');
 if (addToCart) {
   addToCart.addEventListener('click', hideInfoModal);
 }
+
+//Perhaps we should split up our javascript into more than one file?
+/********************************
+* 
+*  SEARCH BAR
+*
+*  Goal: This will take the input and direct the user to the rentals page with the keywords searched for
+*  at the end as a specifier like url.com/rentals/keywords=large_decorative_christmas_trees
+*
+* Method to allow "ENTER" to do the same thing as the search button from: https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+*********************************/
+
+var searchBar= document.getElementById("navbar-search-input");
+var searchButton = document.getElementById("navbar-search-button");
+
+searchBar.addEventListener("keyup", function(event){
+    event.preventDefault();
+    if(event.keyCode === 13){
+        searchButton.click();
+    }
+});
+
+searchButton.addEventListener("click", function(event){
+    let searchInput = searchBar.value;
+    if(searchInput == ""){
+        return;
+    }
+    //moving them to rental page with search info if they aren't already there
+    window.location.href ='//localhost:3000/rentals/' + searchInput;
+    
+    //If they're already there, just doing a POST to get the data I want!
+    /*FIX*/
+});
