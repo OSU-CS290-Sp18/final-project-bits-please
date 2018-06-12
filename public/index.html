@@ -5,7 +5,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>Almost Christmas</title>
+  <title>Rentals</title>
 
   <!-- This is a stylesheet that includes the font: Roboto -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
@@ -22,7 +22,7 @@
 <body>
 
 <header>
-<h1 class="site-title"> <a href="https://imgur.com/oZVVaCh"><img src="https://i.imgur.com/oZVVaCh.png" title="source: imgur.com" /></a>Almost Christmas<a href="https://imgur.com/ROcSenx"><img src="https://i.imgur.com/ROcSenx.png" title="source: imgur.com" /></a></h1>
+<h1 class="site-title"> <a href="https://imgur.com/oZVVaCh"><img src="https://i.imgur.com/oZVVaCh.png" title="source: imgur.com" /></a>Almost Christmas Props<a href="https://imgur.com/ROcSenx"><img src="https://i.imgur.com/ROcSenx.png" title="source: imgur.com" /></a></h1>
 
   <nav class="navbar">
     <ul class="navlist">
@@ -88,46 +88,64 @@
     <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
   </div>
 <!--Photo BOX-->
-    <section class="photo-box">
+<!--div class= "cartDiv" needs to be hidden in rentals and only show cart(close button)
+ div class = "item-div" needs to be hidden and show only in item modal ({{Description}})
+{{QTY}}-->
+  <section class="photo-box">
+    <div class="inner-photo-box">
+      <div class="cartDiv">
       <button type="button" class="photo-remove-button">&times;</button>
     </div>
+      <div class="item-name"> <b>{{itemName}}</b>
+      </div>
       <div class="img-container">
         <img class="item-photo-img" src="https://i.imgur.com/x4nOwL4.jpg" >
       </div>
-      <div class="item-name"><b>Item: </b>
-        santa
-      </div>
-      <div class="item-price"><b>Price: </b>
+
+      <div class="item-price"><b>{{price}} </b>
         $802
       </div>
-      <div class="item-Description"><b> Description: </b>
+      <div class="item-div">
+        <div class="item-quantity"><b> {{item-quantity}} </b>
+        there can only be one
+        </div>
+      <div class="item-Description"><b> {{Description}} </b>
         there is no way you can own santa hahhahah
+      </div>
+    </div>
+      <div class = "more-info">
+      <button type="button" id="more-info-button" class="action-button">More Info</button>
+    </div>
+  </div>
+    </section>
+    <!--Photo BOX-->
+    <section class="photo-box">
+      <div class="inner-photo-box">
+        <div class="cartDiv">
+        <button type="button" class="photo-remove-button">&times;</button>
+      </div>
+        <div class="item-name"> <b>{{itemName}}</b>
+        </div>
+        <div class="img-container">
+          <img class="item-photo-img" src="https://i.imgur.com/4vdyqWy.jpg" >
+        </div>
+
+        <div class="item-price"><b>{{price}} </b>
+          $802
+        </div>
+        <div class="item-div">
+          <div class="item-quantity"><b> {{item-quantity}} </b>
+          a few balls
+          </div>
+        <div class="item-Description"><b> {{Description}} </b>
+        heres a ball with some water in it. cool
+        </div>
       </div>
       <div class = "more-info">
       <button type="button" id="more-info-button" class="action-button">More Info</button>
     </div>
-    </section>
-    <!--Photo BOX-->
-        <section class="photo-box">
-
-          <button type="button" class="photo-remove-button">&times;</button>
-          <div class="img-container">
-            <img class="item-photo-img" src="https://i.imgur.com/4vdyqWy.jpg" >
-          </div>
-          <div class="item-name"><b>Item: </b>
-            snowglobe
-          </div>
-          <div class="item-price"><b>Price: </b>
-            $15
-          </div>
-          <div class="item-Description"><b> Description: </b>
-            heres a ball with some water in it. cool
-          </div>
-          <div class = "more-info">
-          <button type="button" id="more-info-button" class="action-button">More Info</button>
-        </div>
-      </div>
-        </section>
+    </div>
+      </section>
 
 </main>
 
@@ -139,7 +157,7 @@
     <div class="company-logo">
 <a href="https://imgur.com/b7AxpHU"><img src="https://i.imgur.com/b7AxpHU.png" title="source: imgur.com" /></a>
   </div>
-  <p class="footer-company-name">Almost Christmas</p>
+  <p class="footer-company-name">Almost Christmas Props</p>
 
   <div class="footer-links">
   <a href="/">Home - </a>
@@ -170,6 +188,7 @@
       <a href ="https://www.pinterest.com/christmasprops/"><i class="fab fa-pinterest-square"></i></a>
       <a href ="https://www.instagram.com/christmasprops/"><i class="fab fa-instagram"></i></a>
       <a href="https://www.yelp.com/biz/almost-christmas-prop-shoppe-north-hollywood-2"><i class="fab fa-yelp"></i></a>
+      <a href="https://twitter.com/christmasprops1"><i class="fab fa-twitter"></i></a>
     </div>
 
 
@@ -240,23 +259,25 @@
 <div id="item-modal" class="info">
 
 <div class="modal-box">
+  <button type="button" class="info-close-button">&times;</button>
   <div class="item-name">
     <h3>Item:{{name}}</h3>
-    <button type="button" class="info-close-button">&times;</button>
   </div>
   <div class="item-body">
 
-  <div class="img-container">
+  <div class="left-col">
     <img class="item-photo-img" src="https://i.imgur.com/x4nOwL4b.jpg" />
+    <div class= "item-quantity">
+      {{quantity}}
+    </div>
   </div>
-  <div class="item-price">
-    ${{price}}
-  </div>
-  <div class= "item-quantity">
-    ${{quantitiy}}
-  </div>
-  <div class="item-Description">
-    {{Description}}
+  <div class="right-col">
+    <div class="item-price">
+      ${{price}}
+    </div>
+    <div class="item-Description">
+      {{Description}}
+    </div>
   </div>
 
   <div class = "add-cart">
@@ -277,6 +298,10 @@
       </div>
 
       <div class="modal-body">
+    <div class="item-input-element">
+        <label for="item-name-input">Item Name</label>
+          <input type="text" id="item-name-input">
+        </div>
     <div class="item-input-element">
       <label for="item-url-input">Photo URL</label>
       <input type="text" id="item-url-input">
