@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>Almost Christmas</title>
+  <title>Contact Us</title>
 
   <!-- This is a stylesheet that includes the font: Roboto -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
@@ -21,7 +21,7 @@
 <body>
 
 <header>
-<h1 class="site-title"> <a href="https://imgur.com/oZVVaCh"><img src="https://i.imgur.com/oZVVaCh.png" title="source: imgur.com" /></a>Almost Christmas<a href="https://imgur.com/ROcSenx"><img src="https://i.imgur.com/ROcSenx.png" title="source: imgur.com" /></a></h1>
+<h1 class="site-title"> <a href="https://imgur.com/oZVVaCh"><img src="https://i.imgur.com/oZVVaCh.png" title="source: imgur.com" /></a>Almost Christmas Props<a href="https://imgur.com/ROcSenx"><img src="https://i.imgur.com/ROcSenx.png" title="source: imgur.com" /></a></h1>
 
   <nav class="navbar">
     <ul class="navlist">
@@ -80,21 +80,40 @@
 
 </header>
 <!--CONTENT CONTAINER-->
+
 <main class="content-container">
-  <div class="contact-container">
-    <div class="contact-header">
-      <p>Interested in ........ ect ect ect. </p>
-    <div class="contact-title">
-      <h3>  CONTACT US! </h3>
+  <div class="container">
+    <div class="contact-intro">
+      <h2>Contact Us</h2>
+      <p>Questions? not sure what to put here yet. </p>
     </div>
-    <ul class ="contact-items">
-      <li>Logo</li>
-      <li>phone number</li>
-      <li>Map</li>
-      <li>email</li>
-      <li>link to FB</li>
-    </ul>
+
+    <div class="row">
+      <div class="gmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.14045853318!2d-118.37169008478189!3d34.16832638057456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c295f4661f26a7%3A0xba75d5046fdb427a!2sAlmost+Christmas+Prop+Shoppe!5e0!3m2!1sen!2sus!4v1528839595653" width="350" height="170" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="contact-form">
+        <form action="/action_page.php">
+          <label for="fname"> Name</label>
+          <input type="text" id="name" name="contactName" placeholder="Contact Name">
+          <label for="lname">Email</label>
+          <input type="text" id="email" name="e-mail" placeholder="E-mail address..">
+          <label for="lname">Phone Number</label>
+          <input type="text" id="phone" name="phoneNum" placeholder="(Optional)">
+          <label for="contact-pref">Best way to reach you.</label>
+                <select id="howContact" name="howContact">
+                  <option value="call">Call me!</option>
+                  <option value="eMail">E-mail please.</option>
+                </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <button type="button" id="form-button">Submit
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
+
 </main>
 
 
@@ -231,7 +250,6 @@
     <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
     <button type="button" id="modal-accept" class="action-button">Add Item</button>
   </div>
-
   </div>
 </div>
 

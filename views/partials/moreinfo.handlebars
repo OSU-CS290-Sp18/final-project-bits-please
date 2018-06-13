@@ -1,0 +1,43 @@
+<!--MORE INFO Modal
+Placeholders for info:
+{{name}}
+{{photoURL}}
+{{quantity}}
+{{price}}
+{{description}}
+Event listeners needed:
+<button id="add-to-cart">
+sends that photoBox to cart
+-->
+<div id="modal-bdrop" class="info"></div>
+<div id="item-modal" class="info">
+
+<div class="modal-box">
+  <button type="button" class="info-close-button">&times;</button>
+  <div class="item-name">
+    <h3>Item:{{name}}</h3>
+  </div>
+  <div class="item-body">
+
+  <div class="left-col">
+    <img class="item-photo-img" src="{{photoURL}}" />
+    <div class= "item-quantity">
+      {{quantity}}
+    </div>
+  </div>
+  <div class="right-col">
+    <div class="item-price">
+      ${{price}}
+    </div>
+    <div class="item-Description">
+      {{description}}
+    </div>
+  </div>
+
+  <div class = "add-cart">
+  <button type="button" id="add-to-cart"><i class="fas fa-cart-plus"></i>
+  </button>
+  </div>
+</div>
+</div>
+</div>

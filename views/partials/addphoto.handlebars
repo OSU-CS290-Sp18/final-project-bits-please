@@ -1,18 +1,16 @@
 <!--Addphoto modal containing:
-Add photo button and the following input id:
-  photo upload link:  id="item-url-input">
-  price:              id="price-input"
-  QTY:                id="qty-input"
-  Description:        id="item-description-input"
+Add photo button and the following input id:      *input becomes:
+  photo upload link:  id="item-url-input"           {{photoURL}}
+  Name                id="item-name-input"           {{name}}
+  price:              id="price-input"               {{price}}
+  QTY:                id="qty-input"                {{quantity}}
+  Description:        id="item-description-input"   {{description}}
+JS events needed:
+modal-cancel: exits modal
+modal-accept: adds item at end of class="content-container"
 -->
-
-
-<button type="button" id="add-item-button"><i class="fas fa-camera">
-</i></button>
-
 <div id="modal-backdrop" class="hidden"></div>
 <div id="add-item-modal" class="hidden">
-
   <div class="modal-dialog">
     <div class="modal-header">
       <h3>Add a Photo</h3>
@@ -20,21 +18,24 @@ Add photo button and the following input id:
     </div>
 
     <div class="modal-body">
-
-  <div class="item-input-element">
-    <label for="item-url-input">Photo URL</label>
+  <div class="item-input-element">Item Name
+      <label for="item-name-input">{{name}}</label>
+        <input type="text" id="item-name-input">
+      </div>
+  <div class="item-input-element">Photo URL
+    <label for="item-url-input">{{photoURL}}</label>
     <input type="text" id="item-url-input">
   </div>
-  <div class="price-input-element">
-    <label for="price-input">Price</label>
+  <div class="item-input-element">Price
+    <label for="price-input">{{price}}</label>
     <input type="text" id="price-input">
   </div>
-  <div class="qty-input-element">
-    <label for="qty-input">QTY</label>
+  <div class="item-input-element">QTY
+    <label for="qty-input">{{quantity}}</label>
     <input type="text" id="qty-input">
   </div>
-  <div class="item-input-element">
-    <label for="item-description-input">Description</label>
+  <div class="item-input-element">Description
+    <label for="item-description-input">{{description}}</label>
     <input type="text" id="item-description-input"></input>
   </div>
 

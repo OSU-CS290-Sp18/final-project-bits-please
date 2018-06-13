@@ -1,1 +1,44 @@
+<!--Contact us page: takes form input and created email that is
+sent to customer eMail (we can use one of ours just for demo purposes)
+<label for="fname"> Name</label>
+<label for="lname">Email</label>
+<label for="lname">Phone Number</label>
+<label for="contact-pref"><select id="howContact" name="howContact">
+2 options (we can delete if you want not necessary)
+-->
 {{>header}}
+<main class="content-container">
+  <div class="container">
+    <div class="contact-intro">
+      <h2>Contact Us</h2>
+      <p>Questions? We would love to help!</p>
+    </div>
+
+    <div class="row">
+      <div class="gmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.14045853318!2d-118.37169008478189!3d34.16832638057456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c295f4661f26a7%3A0xba75d5046fdb427a!2sAlmost+Christmas+Prop+Shoppe!5e0!3m2!1sen!2sus!4v1528839595653" width="350" height="170" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="contact-form">
+        <form action="/action_page.php">
+          <label for="fname"> Name</label>
+          <input type="text" id="name" name="contactName" placeholder="Contact Name">
+          <label for="lname">Email</label>
+          <input type="text" id="email" name="e-mail" placeholder="E-mail address..">
+          <label for="lname">Phone Number</label>
+          <input type="text" id="phone" name="phoneNum" placeholder="(Optional)">
+          <label for="contact-pref">Best way to reach you.</label>
+                <select id="howContact" name="howContact">
+                  <option value="call">Call me!</option>
+                  <option value="eMail">E-mail please.</option>
+                </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <button type="button" id="form-button">Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+{{>footer}}
+

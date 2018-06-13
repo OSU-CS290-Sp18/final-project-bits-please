@@ -2,22 +2,38 @@
 {{photoURL}}
 {{name}}
 {{price}}
+{{quantity}}
 {{description}}
+JS needed:
+div class= "cartDiv" class="photo-remove-button" needs to be hidden in rentals PAGE and only show in cart
+            when clicked, it removes photobox from cart page
+div class = "item-div" needs to be hidden and show only in item modal ({{Description}})
+more info button: js already done for this part
 -->
-<section class="photo-box">
-  <div class="img-container">
-    <img class="item-photo-img" src="{{photoURL}}" />
+  <section class="photo-box">
+    <div class="inner-photo-box">
+      <div class="cartDiv">
+      <button type="button" class="photo-remove-button">&times;</button>
+    </div>
+      <div class="item-name"> <b>{{name}}</b>
+      </div>
+      <div class="img-container">
+        <img class="item-photo-img" src="{{photoURL}}" >
+      </div>
+
+      <div class="item-price"><b>{{price}} </b>
+        $802
+      </div>
+      <div class="item-div">
+        <div class="item-quantity"><b> {{quantity}} </b>
+        there can only be one
+        </div>
+      <div class="item-Description"><b> {{description}} </b>
+        there is no way you can own santa hahhahah
+      </div>
+    </div>
+      <div class = "more-info">
+      <button type="button" id="more-info-button" class="action-button">More Info</button>
+    </div>
   </div>
-  <div class="item-name">
-    {{name}}
-  </div>
-  <div class="item-price">
-    {{price}}
-  </div>
-  <div class="item-Description">
-    {{description}}
-  </div>
-    <div class = "more-info">
-  <button type="button" id="more-info-button" class="action-button">More Info</button>
-</div>
-</section>
+    </section>
