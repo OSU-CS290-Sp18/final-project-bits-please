@@ -3,7 +3,7 @@
 
 <div class="container">  
   <form id="contact" action="" method="post">
-    <form id ="contact" action ="<?= $_SERVER['PHP_SELF']; ?>" method = "post"
+    <form id ="contact" action ="<?= $_SERVER['PHP_SELF']; ?>" method = "post">
     <h3>Quick Contact</h3>
     <h4>Contact us today, and get a reply within 24 hours!</h4>
     <fieldset>
