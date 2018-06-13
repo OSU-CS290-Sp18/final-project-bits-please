@@ -704,6 +704,14 @@ button {
 
 	}
 }
+#remove-button {
+  margin-left: 0px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: #343434;
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 490px) {
 
