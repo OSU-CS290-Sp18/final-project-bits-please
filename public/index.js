@@ -22,6 +22,36 @@ function hideAddItemModal() {
   addItemModal.classList.add('hidden');
 }
 
+
+/* Data Interaction and Server Work*/
+var photoURL = document.getElementById("item-url-input");
+var price = document.getElementById("price-input");
+var qty = document.getElementById("qty-input");
+var description = document.getElementById("item-description-input");
+var acceptBtn = document.getElementById("modal-accept");
+
+acceptBtn.addEventListener("click", function(){
+    if(!photoURL.value || !price.value || !qty.value || !description.value){
+        alert("You must fill in all of the required fields!");
+        return;
+    }
+    
+    var upload = new XMLHttpRequest();
+    upload.open('POST', "/addItem");
+    upload.setRequestHeader('Content-Type', 'application/json');
+    
+    var newItem = {
+        photoURL: photoURL.value,
+        price: price.value,
+        qty: qty.value,
+        description: description.value
+    };
+    
+    uploadBody = JSON.stringify(newItem);
+    upload.send(uploadBody);
+    
+});
+
 /*  MORE INFO modal js*/
 //shows info modal
 function moreInfoModal() {
@@ -72,3 +102,36 @@ var addToCart = document.querySelector('#item-modal .add-to-cart');
 if (addToCart) {
   addToCart.addEventListener('click', hideInfoModal);
 }
+
+
+//Perhaps we should split up our javascript into more than one file?
+/********************************
+* 
+*  SEARCH BAR
+*
+*  Goal: This will take the input and direct the user to the rentals page with the keywords searched for
+*  at the end as a specifier like url.com/rentals/large%20decorative%20christmas%20trees
+*
+* Method to allow "ENTER" to do the same thing as the search button from: https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+*********************************/
+
+var searchBar= document.getElementById("navbar-search-input");
+var searchButton = document.getElementById("navbar-search-button");
+
+searchBar.addEventListener("keyup", function(event){
+    event.preventDefault();
+    if(event.keyCode === 13){
+        searchButton.click();
+    }
+});
+
+searchButton.addEventListener("click", function(event){
+    let searchInput = searchBar.value;
+    if(searchInput == ""){
+        return;
+    }
+    //moving them to rental page with search info if they aren't already there
+    window.location.href ='//localhost:3000/rentals/' + searchInput; /*CHANGE TO FINAL URL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    
+    /*Work In Progress*/
+});
