@@ -1,1 +1,18 @@
+<!-- for each photobox call each photobox handlebar
+***IF statement for moreInfoModal not sure if i include this in here or not -->
 {{>header}}
+<main class="content-container">
+<li class="navitem navbar-search">
+  <input type="text" id="navbar-search-input" placeholder="Search...">
+  <button type="button" id="navbar-search-button"><i class="fa fa-search"></i></button>
+</li>
+{{#each photobox}}
+      {{> photobox}}
+    {{/each}}
+</main>
+{{#if moreInfomodal}}
+{{>moreInfoModal}}
+{{/if}}
+
+{{>footer}}
+{{>addphoto}}
