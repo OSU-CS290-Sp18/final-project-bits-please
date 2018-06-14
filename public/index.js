@@ -103,7 +103,7 @@ if (closeInfoButton) {
   closeInfoButton.addEventListener('click', hideInfoModal);
 }
 /*add to cart*/
-var addToCart = document.querySelector('#item-modal .add-to-cart');
+var addToCart = document.querySelector('#item-modal #add-to-cart');
 if (addToCart) {
   addToCart.addEventListener('click', hideInfoModal);
 }
