@@ -49,7 +49,7 @@ acceptBtn.addEventListener("click", function(){
     
     uploadBody = JSON.stringify(newItem);
     upload.send(uploadBody);
-    
+    hideAddItemModal(); //Erin edited here 6:28 6/13   
 });
 
 /*  MORE INFO modal js*/
@@ -87,6 +87,11 @@ if (modalCloseButton) {
   modalCloseButton.addEventListener('click', hideAddItemModal);
 }
 
+var modalCancelButton = document.getElementById('modal-cancel');
+if (modalCancelButton) {
+  modalCancelButton.addEventListener('click', hideAddItemModal);
+  hideAddItemModal(); //Erin edited here 6:28 6/13   
+}
 /*more info button*/
 var moreInfoButton = document.getElementById('more-info-button');
 if (moreInfoButton) {
