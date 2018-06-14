@@ -430,7 +430,7 @@ margin-left: 50px;
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #item-modal {
   position: fixed;
@@ -460,6 +460,15 @@ margin-left: 50px;
 .item-name {
   text-align: center;
   padding: 10px 20px;
+  font-family: cursive;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 200px;
+}
+.modal-img-container{
+  float: left;
+  width: 50%;
+
 }
 
 .item-name h3 {
@@ -470,8 +479,8 @@ margin-left: 50px;
 
 .info-close-button {
   float: left;
-  margin-left: 15px;
-  top: 5px;
+  margin-left: 535px;
+  top: 0px;
   font-size: 24px;
   border: none;
   background: none;
@@ -496,6 +505,20 @@ margin-left: 50px;
  margin-top: 50px;
   bottom: 20px;
 }
+.item-price{
+  padding: 10px 50px;
+}
+.item-quantity{
+  padding: 10px 50px;
+}
+.item-Description{
+  padding: 10px 50px;
+  font-family: cursive;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 200px;
+}
+
 .item-footer {
   display: flex;
   justify-content: flex-end;
@@ -507,7 +530,8 @@ margin-left: 50px;
 
 /****ADD CART Button CSS******/
 #add-to-cart {
-  margin-right: 20px;
+   margin-right: 145px;
+  margin-bottom:10px;
   height: 30px;
   width: 60px;
   border: none;
@@ -517,6 +541,18 @@ margin-left: 50px;
   color: #fff;
   cursor: pointer;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-img-container{
+  float: left;
+ width: 50%;
+}
+
+.fa-cart-plus{
+  padding: 0px;
+  font-size: 25px;
+  margin-bottom: 5px;
+
 }
 
 #add-to-cart:hover,
