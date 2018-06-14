@@ -1,1 +1,72 @@
 {{>header}}
+<div id="wrapper">
+  <div id="content">
+<div class = "top-cart">
+      <h1>Santa's Sleigh</h1>
+      <h4>Items you have added to your cart are shown below. </h3>
+    </div>
+
+    <main role="main">
+      <form id="subtotal-form" name="subtotal-form" method="post" action="">
+        <table class="cart-tbl">
+          <thead>
+            <tr class = "headings">
+              <th>Product</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Cost</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="item-name"> <b>{{name}}</b>
+
+              </td>
+              <td>
+                <div class="currency">
+                  <input type="text"><div class="item-price"><b>{{price}} </b>
+                </div>
+              </td>
+              <td>
+                <div class="qty">
+                  <input type="text"><div class = "item-quantity"><b>{{quantity}}</b>
+              </td>
+              <td>
+                <div class="currency">
+                  <input type="text"><div class = "cost"><b>{{cost}}</b>
+              </td>
+              <td>
+                <button type="button" id="remove-button" class="remove-button"><i class="far fa-trash-alt"></i>
+              </td>
+            </tr>
+        </table>
+
+        <table class="result-tbl">
+          <tbody>
+            <tr class="tbl-foot">
+              <td colspan="3">
+                <label>Subtotal</label>
+              </td>
+              <td>
+                <div class="currency">
+                  <input type="text" <div class = "subtotal"><b>{{subtotal}}</b>
+                </div>
+              </td>
+              <td>&nbsp;</td>
+            </tr>
+
+
+            <tr class="tbl-foot">
+              <td>&nbsp;</td>
+              <td colspan="4">
+                <button type="button" id="checkout-button" class="action-button">Request Rentals</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </main>
+</div>
+
+{{>footer}}
