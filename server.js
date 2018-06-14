@@ -52,6 +52,28 @@ app.get('/contact', function(req,res,next){
     res.status(200).render('contactPage');
 });
 
+app.get('/rentals/:searchTermsURL', function(req,res,next){
+    
+    //This index creation command only needs to be done ONCE! Not sure if that will mess stuff up. Perhaps run it on inventory before presentation then remove?
+    db.collection('inventory').createIndex( { name: "text", description: "text" } );
+    
+    var searchTerms = decodeURI(req.params.searchTermsURL);
+    
+    console.log("Searchterms: " + searchTerms);
+    //searching mongo for things that match search terms
+    var inventoryCollection = db.collection('inventory');
+    var inventory = inventoryCollection.find( { $text: { $search: searchTerms } });
+    
+    
+    inventory.toArray(function (err, photobox) {
+    if (err) {
+    res.status(500).send("Error fetching items from DB.");
+    } 
+    else {    
+    res.status(200).render('rentalsPage', {photobox});
+    }
+});
+});
 
 app.get('/rentals', function(req,res,next){
     var inventoryCollection = db.collection('inventory');
@@ -75,20 +97,20 @@ app.get('*', function(req,res,next){
 /*Uploading New Items*/
 app.post('/addItem', function(req,res){
    db.collection('inventory').insertOne({
+       "name": req.body.name,
        photoURL: req.body.photoURL,   
        price: req.body.price, 
        qty: req.body.qty,  
-       description: req.body.description    
+       "description": req.body.description    
    });
 });
 
-console.log(mongoURL);
 MongoClient.connect(mongoURL, function (err, client) {
   if (err) {
     throw err;
   }
   db = mongoDBDatabase = client.db(mongoDBName);
-  app.listen(3000, function () {
-    console.log("== Server listening on port 3000");
+  app.listen(port, function () {
+    console.log("== Server listening on port " + port);
   });
 });
