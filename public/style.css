@@ -5,6 +5,7 @@ body {
 }
 /* ---------SITE TITLE STUFF---------- */
 header {
+font-family: 'Lato', sans-serif;
   background-color: #B3DAF1;
   color: #fff;
 }
