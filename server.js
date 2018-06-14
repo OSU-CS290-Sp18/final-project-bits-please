@@ -57,12 +57,12 @@ app.get('/rentals', function(req,res,next){
     var inventoryCollection = db.collection('inventory');
     var inventory = inventoryCollection.find();
     
-    inventory.toArray(function (err, items) {
+    inventory.toArray(function (err, photobox) {
     if (err) {
     res.status(500).send("Error fetching people from DB.");
     } 
     else {    
-    res.status(200).render('rentalsPage', {items});
+    res.status(200).render('rentalsPage', {photobox});
     }
 });
 });
