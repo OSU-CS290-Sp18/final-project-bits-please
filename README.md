@@ -1,5 +1,9 @@
 # final-project-bits-please
 
+A Christmas decoration rental website written in JavaScript using MongoDB to store data.
+Developed for Rob Hess' CS290 Web Development at Oregon State University.
+---------------------------------------------------------------------------------------------------
+
 Hey Guys, 
 here is a recap of what we spoke about last meeting:
 
